@@ -7,7 +7,7 @@ import requests
 from requests import get
 
 from assets.my_gif import MyGif
-from weather_card import WeatherCard
+from assets.weather_card import WeatherCard
 
 
 class MyApp(customtkinter.CTk):
@@ -17,7 +17,7 @@ class MyApp(customtkinter.CTk):
         customtkinter.set_appearance_mode("dark")  # Modes: system (default), light, dark
         customtkinter.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
         self.title("Weather App")
-        icon_image = PhotoImage(file="assets/icon.png")
+        icon_image = PhotoImage(file="assets/images/icon.png")
         self.iconphoto(False, icon_image)
         self.geometry("740x320")
         self.resizable(False, False)
@@ -33,7 +33,7 @@ class MyApp(customtkinter.CTk):
         self.placeholder = customtkinter.CTkFrame(self, height=200)
         # self.placeholder = WeatherCard(master=self, weather=weather, height=200)
         self.placeholder.place(relx=0.5, rely=0.58, relwidth=0.93, height=240, anchor='center')
-        self.gif_load = MyGif(self.placeholder, 'assets/loading.gif')
+        self.gif_load = MyGif(self.placeholder, 'assets/images/loading.gif')
         self.gif_load.place(relx=0.5, rely=0.5, anchor='center')
         self.l_placeholder = customtkinter.CTkLabel(self.placeholder, text="Weather not set.",
                                                     text_font=font.Font(size=25),
