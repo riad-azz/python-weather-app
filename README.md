@@ -1,6 +1,6 @@
 # WeatherApp
 
-a simple weather app made with tkinter and requests library
+a simple weather app made with **Tkinter** and a free **Weather API**
 
 ## How it was made
 
